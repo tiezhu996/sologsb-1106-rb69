@@ -30,6 +30,7 @@
       <a use:link href={firstDraftPath}>版片编排</a>
       <a use:link href={firstBlockPath}>工序时间线</a>
       <a use:link href="/batches">印制批次</a>
+      <a use:link href="/handover">交接对账</a>
       <a use:link href="/carvers">刻工档</a>
     </nav>
   </header>
