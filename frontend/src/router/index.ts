@@ -3,6 +3,7 @@ import BlockBoard from '../pages/BlockBoard.svelte'
 import NodeTimeline from '../pages/NodeTimeline.svelte'
 import BatchList from '../pages/BatchList.svelte'
 import CarverList from '../pages/CarverList.svelte'
+import ImportHandoff from '../pages/ImportHandoff.svelte'
 
 export const routes = {
   '/drafts': DraftList,
@@ -10,6 +11,7 @@ export const routes = {
   '/blocks/:id/nodes': NodeTimeline,
   '/batches': BatchList,
   '/carvers': CarverList,
+  '/handoff': ImportHandoff,
   '*': DraftList,
 }
 

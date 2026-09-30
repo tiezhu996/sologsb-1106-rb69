@@ -9,11 +9,12 @@
 
   let { colorNo, blockName, size = 'regular' }: Props = $props()
 
-  const colorByBlock: Record<BlockName, string> = {
+  const colorByBlock: Partial<Record<BlockName, string>> = {
     墨线版: '#25211d',
     黄版: '#d9a11b',
     红版: '#c53b2d',
     绿版: '#2f7658',
+    副版: '#8e6b3f',
   }
 
   const colorNoMap: Record<number, string> = {
@@ -23,7 +24,7 @@
     4: '#2f7658',
   }
 
-  const color = $derived(blockName ? colorByBlock[blockName] : (colorNoMap[colorNo] ?? '#8e6b3f'))
+  const color = $derived(blockName ? (colorByBlock[blockName] ?? '#8e6b3f') : (colorNoMap[colorNo] ?? '#8e6b3f'))
 </script>
 
 <span class:small={size === 'small'} class="color-swatch" title={`套色序号 ${colorNo}`}>
